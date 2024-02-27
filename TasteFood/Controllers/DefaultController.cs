@@ -71,5 +71,18 @@ namespace TasteFood.Controllers
             return PartialView();
         }
 
+        public PartialViewResult PartialAbout2()
+        {
+
+            return PartialView();
+        }
+
+        public PartialViewResult PartialFooter()
+        {
+
+            return PartialView();
+        }
+
+
     }
 }

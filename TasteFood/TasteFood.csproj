@@ -426,6 +426,8 @@
     <Content Include="Views\Default\PartialMenu.cshtml" />
     <Content Include="Views\Default\PartialTestimonial.cshtml" />
     <Content Include="Views\Default\PartialChef.cshtml" />
+    <Content Include="Views\Default\PartialAbout2.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
