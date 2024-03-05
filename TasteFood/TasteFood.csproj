@@ -130,14 +130,18 @@
     <Compile Include="Context\TasteContext.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Entites\About.cs" />
     <Compile Include="Entites\Address.cs" />
     <Compile Include="Entites\Admin.cs" />
     <Compile Include="Entites\Category.cs" />
     <Compile Include="Entites\Chef.cs" />
     <Compile Include="Entites\Contact.cs" />
+    <Compile Include="Entites\Notification.cs" />
     <Compile Include="Entites\OpenDayHour.cs" />
     <Compile Include="Entites\Product.cs" />
     <Compile Include="Entites\Reservation.cs" />
@@ -148,6 +152,18 @@
     <Compile Include="Migrations\202402271901234_mig1.cs" />
     <Compile Include="Migrations\202402271901234_mig1.designer.cs">
       <DependentUpon>202402271901234_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402291728098_mig2.cs" />
+    <Compile Include="Migrations\202402291728098_mig2.designer.cs">
+      <DependentUpon>202402291728098_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403051711381_mig3.cs" />
+    <Compile Include="Migrations\202403051711381_mig3.designer.cs">
+      <DependentUpon>202403051711381_mig3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403051740102_mig4.cs" />
+    <Compile Include="Migrations\202403051740102_mig4.designer.cs">
+      <DependentUpon>202403051740102_mig4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -4791,6 +4807,11 @@
     <Content Include="Views\Category\CreateCategory.cshtml" />
     <Content Include="Views\Category\UpdateCategory.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
+    <Content Include="Views\Product\ProductList.cshtml" />
+    <Content Include="Views\Product\CreateProduct.cshtml" />
+    <Content Include="Views\Product\UpdateProduct.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Notification\NotificationList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4829,6 +4850,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202402271901234_mig1.resx">
       <DependentUpon>202402271901234_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402291728098_mig2.resx">
+      <DependentUpon>202402291728098_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403051711381_mig3.resx">
+      <DependentUpon>202403051711381_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403051740102_mig4.resx">
+      <DependentUpon>202403051740102_mig4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
