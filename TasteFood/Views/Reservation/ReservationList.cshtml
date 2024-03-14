@@ -1,0 +1,107 @@
+﻿@model List<TasteFood.Entites.Reservation>
+@{
+    ViewBag.Title = "ReservationList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function updateReservationStatus(reservationId) {
+        var newStatus = $('#reservationStatus_' + reservationId).val();
+
+        $.ajax({
+            url: '/Reservation/UpdateReservationStatus/' + reservationId,
+            type: 'POST',
+            data: { id: reservationId, status: newStatus }, // Include reservation ID in data
+            success: function () {
+                alert('Reservation status updated successfully.');
+                // Optionally, update UI or reload the page
+            },
+            error: function () {
+                alert('Error updating reservation status.');
+            }
+        });
+    }
+</script>
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Rezervasyonlar</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
+            <li class="breadcrumb-item">Rezervasyon</li>
+            <li class="breadcrumb-item active" aria-current="page">Rezervasyon İşlemeleri</li>
+        </ol>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <!-- Simple Tables -->
+            <div class="card">
+                @*<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
+                    </div>*@
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Rezervasyon ID</th>
+                                <th>Rezervasyon İsim</th>
+                                <th>Email</th>
+                                <th>Telefon Numarası</th>
+                                <th>Rezervasyon Tarihi</th>
+                                <th>Rezervasyon Saati</th>
+                                <th>Misafir Sayısı</th>
+                                <th>Rezervayson Durumu</th>
+                                <th>Rezervayson Durumunu Güncelle</th>
+
+                                <th>Sil</th>
+                                <th>Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.ReservationId</td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Phone</td>
+                                    <td>@item.ReservationDate</td>
+                                    <td>@item.Time</td>
+                                    <td>@item.GuestCount</td>
+                                    <th>@item.ReservationStatus</th>
+                                    <td>
+                                        <select id="reservationStatus_@item.ReservationId" class="form-control">
+                                            <option value="">Seçiniz</option>
+                                            <option value="Beklemede">Beklemede</option>
+                                            <option value="Onaylandı">Onayla</option>
+                                            <option value="İptal edildi">İptal et</option>
+                                        </select>
+                                        <button type="button" onclick="updateReservationStatus(@item.ReservationId)" class="btn btn-sm btn-info">Rezervasyon Durumunu Güncelle</button>
+                                    </td>
+                                    <td><a href="/Reservation/DeleteReservation/@item.ReservationId" class="btn btn-sm btn-danger">Sil</a></td>
+                                    <td><a href="/Reservation/UpdateReservation/@item.ReservationId" class="btn btn-sm btn-info">Güncelle</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                   
+                        <td><a href="/Reservation/CreateReservation/" class="btn btn-sm btn-success">Yeni Rezervasyon Girişi</a></td>
+                   
+
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+    <!--Row-->
+
+
+</div>
+
+

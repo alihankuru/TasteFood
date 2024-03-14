@@ -1,0 +1,92 @@
+﻿@model TasteFood.Entites.Reservation
+@{
+    ViewBag.Title = "CreateReservation";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="text-center">
+    <h2>Yeni Rezervasyon Oluştur</h2>
+</div>
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Rezervasyon Ekleme Sayfası</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
+            <li class="breadcrumb-item">Rezervasyon</li>
+            <li class="breadcrumb-item active" aria-current="page">Rezervasyon İşlemeleri</li>
+        </ol>
+    </div>
+
+
+
+
+
+    <form method="post">
+        <label>Rezervasyon İsmi</label>
+        </br>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <label>Email</label>
+        </br>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+        <label>Telefon</label>
+        </br>
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+
+        <label for="ReservationDate">Rezervasyon Tarihi</label>
+        </br>
+        <div class="input-wrap">
+            
+            @Html.TextBoxFor(x => x.ReservationDate, new { @class = "form-control book_date", placeholder = "Rezervasyon Tarihi" })
+        </div>
+
+
+        <label for="Time">Rezervasyon Saati</label>
+      
+        <div class="input-wrap">
+           
+            @Html.TextBoxFor(x => x.Time, new { @class = "form-control book_time", placeholder = "Rezervasyon Saati" })
+        </div>
+
+
+        <label for="GuestCount">Misafir Sayısı</label>
+       
+        <div class="select-wrap">
+           
+            @Html.DropDownListFor(x => x.GuestCount, new List<SelectListItem>
+            {
+                new SelectListItem { Text = "Misafir Sayısı", Value = "", Disabled = true, Selected = true },
+                new SelectListItem { Text = "1", Value = "1" },
+                new SelectListItem { Text = "2", Value = "2" },
+                new SelectListItem { Text = "3", Value = "3" },
+                new SelectListItem { Text = "4", Value = "4" },
+                new SelectListItem { Text = "5", Value = "5" },
+                new SelectListItem { Text = "5+", Value = "6" }
+            }, "Misafir Sayısı", new { @class = "form-control" })
+        </div>
+
+
+
+        <label for="ReservationStatus">Rezervasyon Durumu</label>
+        <div class="select-wrap">
+           
+            @Html.DropDownListFor(x => x.ReservationStatus, new List<SelectListItem>
+            {
+                new SelectListItem { Text = "Beklemede", Value = "Beklemede" },
+                new SelectListItem { Text = "Kabul Et", Value = "Onaylandı" },
+                new SelectListItem { Text = "İptal Et", Value = "İptal Edildi" }
+            }, "Seçiniz", new { @class = "form-control" })
+        </div>
+
+
+        </br>
+        <button class="btn btn-info" type="submit">Kaydet</button>
+        <a href="/Reservation/ReservationList/" class="btn btn-outline-warning">Geriye dön</a>
+    </form>
+
+
+</div>
+
+
+
+

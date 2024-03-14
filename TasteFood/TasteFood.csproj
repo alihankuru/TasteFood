@@ -130,13 +130,17 @@
     <Compile Include="Context\TasteContext.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\PartialSliderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Entites\About.cs" />
     <Compile Include="Entites\Address.cs" />
     <Compile Include="Entites\Admin.cs" />
@@ -145,6 +149,7 @@
     <Compile Include="Entites\Contact.cs" />
     <Compile Include="Entites\Notification.cs" />
     <Compile Include="Entites\OpenDayHour.cs" />
+    <Compile Include="Entites\PartialSlider.cs" />
     <Compile Include="Entites\Product.cs" />
     <Compile Include="Entites\Reservation.cs" />
     <Compile Include="Entites\Testimonial.cs" />
@@ -166,6 +171,10 @@
     <Compile Include="Migrations\202403051740102_mig4.cs" />
     <Compile Include="Migrations\202403051740102_mig4.designer.cs">
       <DependentUpon>202403051740102_mig4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403141016119_mig5.cs" />
+    <Compile Include="Migrations\202403141016119_mig5.designer.cs">
+      <DependentUpon>202403141016119_mig5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2232,6 +2241,7 @@
     <Content Include="Template\tasteit-master\images\person_2.jpg" />
     <Content Include="Template\tasteit-master\images\person_3.jpg" />
     <Content Include="Template\tasteit-master\images\person_4.jpg" />
+    <Content Include="Template\tasteit-master\images\q10.jpg" />
     <Content Include="Template\tasteit-master\images\wine-1.jpg" />
     <Content Include="Template\tasteit-master\images\wine-2.jpg" />
     <Content Include="Template\tasteit-master\images\wine-3.jpg" />
@@ -4816,9 +4826,23 @@
     <Content Include="Views\Notification\NotificationList.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\PartialSlider\PartialSliderList.cshtml" />
+    <Content Include="Views\PartialSlider\CreatePartialSlider.cshtml" />
+    <Content Include="Views\PartialSlider\UpdatePartialSlider.cshtml" />
+    <Content Include="Views\Default\PartialBook.cshtml" />
+    <Content Include="Views\Reservation\ReservationList.cshtml" />
+    <Content Include="Views\Reservation\CreateReservation.cshtml" />
+    <Content Include="Views\Reservation\UpdateReservation.cshtml" />
+    <Content Include="Views\Testimonial\TestimonialList.cshtml" />
+    <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
+    <Content Include="Views\Chef\ChefList.cshtml" />
+    <Content Include="Views\Chef\CreateChef.cshtml" />
+    <Content Include="Views\Chef\UpdateChef.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Image\" />
     <Folder Include="Models\" />
     <Folder Include="Template\ruang-admin\.git\objects\info\" />
     <Folder Include="Template\ruang-admin\.git\objects\pack\" />
@@ -4863,6 +4887,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403051740102_mig4.resx">
       <DependentUpon>202403051740102_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403141016119_mig5.resx">
+      <DependentUpon>202403141016119_mig5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

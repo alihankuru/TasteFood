@@ -1,0 +1,67 @@
+﻿@model List<TasteFood.Entites.PartialSlider>
+@{
+    ViewBag.Title = "PartialSliderList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Sliders</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
+            <li class="breadcrumb-item">Slider</li>
+            <li class="breadcrumb-item active" aria-current="page">Slider İşlemeleri</li>
+        </ol>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <!-- Simple Tables -->
+            <div class="card">
+                @*<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
+                    </div>*@
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Slider ID</th>
+                                <th>Slider Başlığı</th>
+                                <th>Slider Alt Başlık</th>
+                                <th>Slider Açıklaması</th>
+                                <th>Slider ResimUrl</th>
+                                <th>Sil</th>
+                                <th>Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.SliderId</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.SubTitle</td>
+                                    <td>@item.Description</td>
+                                    <td><img src="@item.ImageUrl" style="height:50px;width:50px;" class="rounded mx-auto d-block" alt="@item.ImageUrl"></td>
+
+                                    <td><a href="/PartialSlider/DeletePartialSlider/@item.SliderId" class="btn btn-sm btn-danger">Sil</a></td>
+                                    <td><a href="/PartialSlider/UpdatePartialSlider/@item.SliderId" class="btn btn-sm btn-info">Güncelle</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    @if (Model.Count() != 3)
+                    {
+                        <td><a href="/PartialSlider/CreatePartialSlider/" class="btn btn-sm btn-success">Yeni Slider Girişi</a></td>
+                    }
+
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+    <!--Row-->
+
+
+</div>

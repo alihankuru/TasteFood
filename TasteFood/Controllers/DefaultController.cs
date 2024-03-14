@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TasteFood.Context;
+using TasteFood.Entites;
 
 namespace TasteFood.Controllers
 {
@@ -42,6 +44,34 @@ namespace TasteFood.Controllers
 
         public PartialViewResult PartialSlider()
         {
+            var values=context.PartialSliders.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult PartialBook(Reservation reservation)
+        {
+            try
+            {
+                // Check if the datetime value is within the valid range for datetime data type
+                if (reservation.ReservationDate >= SqlDateTime.MinValue.Value && reservation.ReservationDate <= SqlDateTime.MaxValue.Value)
+                {
+                    context.Reservations.Add(reservation);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    
+                    ModelState.AddModelError("", "Datetime value is out of range.");
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                ModelState.AddModelError("", "An error occurred while processing your request.");
+               
+            }
+
+            
             return PartialView();
         }
 
@@ -61,14 +91,15 @@ namespace TasteFood.Controllers
 
         public PartialViewResult PartialTestimonial()
         {
-            
-            return PartialView();
+            var values = context.Testimonials.ToList();
+
+            return PartialView(values);
         }
 
         public PartialViewResult PartialChef()
         {
-
-            return PartialView();
+            var values = context.Chefs.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialAbout2()

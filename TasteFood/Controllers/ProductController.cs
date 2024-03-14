@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,16 +40,40 @@ namespace TasteFood.Controllers
         [HttpPost]
         public ActionResult CreateProduct(Product p)
         {
-            p.IsActive= true;
+            p.IsActive = true;
 
+            // Check if a file was uploaded
+            if (Request.Files.Count > 0 && Request.Files[0] != null && Request.Files[0].ContentLength > 0)
+            {
+                var file = Request.Files[0];
+                string fileName = Path.GetFileName(file.FileName);
+                string extension = Path.GetExtension(fileName);
+                string relativePath = "~/Template/tasteit-master/images/" + fileName;
+
+                // Map the virtual path to the physical file path
+                string absolutePath = Server.MapPath(relativePath);
+
+                // Save the file to the server
+                file.SaveAs(absolutePath);
+
+                // Set the ImageUrl property of the product
+                p.ImageUrl = Url.Content(relativePath);
+            }
+            else
+            {
+                // Handle the case where no file was uploaded
+                // For example, you might set a default image URL
+                p.ImageUrl = "/Template/tasteit-master/images/";
+            }
+
+            // Add the product to the context and save changes
             context.Products.Add(p);
             context.SaveChanges();
 
+            // Redirect to the product list page
             return RedirectToAction("ProductList");
-
-
         }
-        
+
 
         public ActionResult DeleteProduct(int id)
         {

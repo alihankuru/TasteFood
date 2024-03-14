@@ -1,0 +1,44 @@
+﻿@model TasteFood.Entites.Testimonial
+@{
+    ViewBag.Title = "CreateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Create Testimonial</h2>
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
+            <li class="breadcrumb-item">Testimonials</li>
+            <li class="breadcrumb-item active" aria-current="page">Testimonial İşlemleri</li>
+        </ol>
+    </div>
+
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>İsim Soyisim</label>
+            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+            <br />
+            <label>Title</label>
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+            <br />
+            <label>Açıklaması</label>
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+            <br />
+            <label>Ürün Görseli</label>
+            <input type="file" name="ImageUrl" />
+
+
+         
+            <br />
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Testimonial Ekle</button>
+    </form>
+
+
+</div>

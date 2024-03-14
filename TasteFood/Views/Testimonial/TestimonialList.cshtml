@@ -1,18 +1,17 @@
-﻿@model List<TasteFood.Entites.Product>
+﻿@model List<TasteFood.Entites.Testimonial>
 @{
-    ViewBag.Title = "ProductList";
+    ViewBag.Title = "TestimonialList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-    int count = 0;
 }
 
-<h2>Ürün Listesi</h2>
+<h2>Testimonial Listesi</h2>
 
 <div class="container-fluid" id="container-wrapper">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
-            <li class="breadcrumb-item">Kategoriler</li>
-            <li class="breadcrumb-item active" aria-current="page">Ürün İşlemeleri</li>
+            <li class="breadcrumb-item">Testimonials</li>
+            <li class="breadcrumb-item active" aria-current="page">Testimonial İşlemeleri</li>
         </ol>
     </div>
 
@@ -27,13 +26,12 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
-                                <th>Ürün ID</th>
-                                <th>Ürün Adı</th>
-                                <th>Ürün Kategorisi</th>
-                                <th>Ürün Resmi</th>
+                                <th>Testimonial ID</th>
+                                <th>İsim Soyisim</th>
+                                <th>Title</th>
+                                <th>ImageUrl</th>
 
-                                <th>Fiyat</th>
-                                <th>Durum</th>
+                                <th>Açıklama</th>
                                 <th>Sil</th>
 
                                 <th>Güncelle</th>
@@ -42,23 +40,23 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                count++;
-                                <tr>
-                                    <td>@count</td>
-                                    <td>@item.ProductName</td>
+                                
+                                <tr>                              
+                                    <td>@item.TestimonialId</td>
 
-                                    <td>@item.Category.CategoryName</td>
+                                    <td>@item.NameSurname</td>
+                                    <td>@item.Title</td>
                                     <td><img src="@item.ImageUrl" style="height:50px;width:50px;" class="rounded mx-auto d-block" alt="@item.ImageUrl"></td>
-                                    <td>@item.Price</td>
-                                    <td>@item.IsActive</td>
+                                    <td>@item.Description</td>
+                                  
 
-                                    <td><a href="/Product/DeleteProduct/@item.ProductId" class="btn btn-sm btn-primary">Sil</a></td>
-                                    <td><a href="/Product/UpdateProduct/@item.ProductId" class="btn btn-sm btn-primary">Güncelle</a></td>
+                                    <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-sm btn-primary">Sil</a></td>
+                                    <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-sm btn-primary">Güncelle</a></td>
                                 </tr>
                             }
                         </tbody>
                     </table>
-                    <td><a href="/Product/CreateProduct/" class="btn btn-sm btn-primary">Yeni Ürün Girişi</a></td>
+                    <td><a href="/Testimonial/CreateTestimonial/" class="btn btn-sm btn-primary">Yeni TestimonialId Girişi</a></td>
                 </div>
                 <div class="card-footer"></div>
             </div>
@@ -68,3 +66,5 @@
 
 
 </div>
+
+
