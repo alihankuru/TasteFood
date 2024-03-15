@@ -1,0 +1,50 @@
+﻿@model TasteFood.Entites.Aboutt
+@{
+    ViewBag.Title = "CreateAboutt";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni About</h2>
+
+
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
+            <li class="breadcrumb-item">About2</li>
+            <li class="breadcrumb-item active" aria-current="page">About2 İşlemleri</li>
+        </ol>
+    </div>
+
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Title</label>
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+            <br />
+            <label>Title 2</label>
+            @Html.TextBoxFor(x => x.Title2, new { @class = "form-control" })
+            <br />
+            <label>Açıklaması</label>
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+            <br />
+
+
+            <label>About2 Görseli</label>
+            <input type="file" name="ImageUrl" />
+
+            <label>About2.2 Görseli</label>
+            <input type="file" name="ImageUrl2" />
+
+            <br />
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">About Ekle</button>
+    </form>
+
+
+</div>
+

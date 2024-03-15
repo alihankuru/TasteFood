@@ -128,12 +128,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\TasteContext.cs" />
+    <Compile Include="Controllers\AbouttController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\FooterController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NotificationController.cs" />
     <Compile Include="Controllers\PartialSliderController.cs" />
@@ -142,11 +144,13 @@
     <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Entites\About.cs" />
+    <Compile Include="Entites\Aboutt.cs" />
     <Compile Include="Entites\Address.cs" />
     <Compile Include="Entites\Admin.cs" />
     <Compile Include="Entites\Category.cs" />
     <Compile Include="Entites\Chef.cs" />
     <Compile Include="Entites\Contact.cs" />
+    <Compile Include="Entites\Footer.cs" />
     <Compile Include="Entites\Notification.cs" />
     <Compile Include="Entites\OpenDayHour.cs" />
     <Compile Include="Entites\PartialSlider.cs" />
@@ -175,6 +179,14 @@
     <Compile Include="Migrations\202403141016119_mig5.cs" />
     <Compile Include="Migrations\202403141016119_mig5.designer.cs">
       <DependentUpon>202403141016119_mig5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403142346413_mig6.cs" />
+    <Compile Include="Migrations\202403142346413_mig6.designer.cs">
+      <DependentUpon>202403142346413_mig6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403150024557_mig7.cs" />
+    <Compile Include="Migrations\202403150024557_mig7.designer.cs">
+      <DependentUpon>202403150024557_mig7.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -4839,6 +4851,11 @@
     <Content Include="Views\Chef\ChefList.cshtml" />
     <Content Include="Views\Chef\CreateChef.cshtml" />
     <Content Include="Views\Chef\UpdateChef.cshtml" />
+    <Content Include="Views\Aboutt\AbouttList.cshtml" />
+    <Content Include="Views\Aboutt\CreateAboutt.cshtml" />
+    <Content Include="Views\Aboutt\UpdateAboutt.cshtml" />
+    <Content Include="Views\Footer\FooterList.cshtml" />
+    <Content Include="Views\Default\PartialFooter2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4890,6 +4907,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403141016119_mig5.resx">
       <DependentUpon>202403141016119_mig5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403142346413_mig6.resx">
+      <DependentUpon>202403142346413_mig6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403150024557_mig7.resx">
+      <DependentUpon>202403150024557_mig7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

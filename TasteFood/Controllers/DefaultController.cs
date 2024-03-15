@@ -105,14 +105,44 @@ namespace TasteFood.Controllers
         public PartialViewResult PartialAbout2()
         {
 
-            return PartialView();
+            var values = context.Aboutts.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialFooter()
         {
+            var values=context.Footers.ToList();
+            
+
+            return PartialView(values);
+        }
+
+        public PartialViewResult PartialFooter2(Contact p)
+        {
+            try
+            {
+                // Ensure the DateTime property is within the valid range
+                if (p.SendDate >= SqlDateTime.MinValue.Value && p.SendDate <= SqlDateTime.MaxValue.Value)
+                {
+                    // Handle the out-of-range condition appropriately
+                    // Perhaps set a default value or log the issue
+                }
+                else
+                {
+                    p.SendDate = DateTime.UtcNow;
+                    context.Contacts.Add(p);
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions appropriately
+                // Log the exception or return an error message
+            }
 
             return PartialView();
         }
+
 
 
     }
