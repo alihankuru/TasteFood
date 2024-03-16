@@ -14,24 +14,31 @@ namespace TasteFood.Controllers
         TasteContext context = new TasteContext();
         // GET: Login
         [HttpGet]
-        public ActionResult Login()
+        public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Login(Admin p)
+        public ActionResult Index(Admin p)
         {
-            var values=context.Admins.FirstOrDefault(x=>x.Username==p.Username&&x.Password==p.Password);
-            if(values!=null)
+            var values = context.Admins.FirstOrDefault(x => x.Username == p.Username && x.Password == p.Password);
+            if (values != null)
             {
-                FormsAuthentication.SetAuthCookie(values.Username, true);
-                Session["a"]=values.Username;
-                return RedirectToAction("ProductList", "Product");
+                FormsAuthentication.SetAuthCookie(values.Username, false);
+                Session["username"] = values.Username;
+                Session["id"] = values.AdminId;
+                Session["surname"] = values.Surname;
+                Session["name"] = values.Name;
+                Session["password"] = values.Password;
+                Session["img"] = values.ImageUrl;
+
+
+                return RedirectToAction("Index", "Profile");
             }
-
-
             return View();
+
+
         }
     }
 }

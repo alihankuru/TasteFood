@@ -1,0 +1,48 @@
+﻿@model TasteFood.Entites.Footer
+@{
+    ViewBag.Title = "UpdateFooter";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Footer Güncelle</h2>
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
+            <li class="breadcrumb-item">Footers</li>
+            <li class="breadcrumb-item active" aria-current="page">Footer İşlemleri</li>
+        </ol>
+    </div>
+
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+
+            @Html.HiddenFor(x => x.FooterId)
+            <label>Açıklama</label>
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+            <br />
+            <label>Social Media</label>
+            @Html.TextBoxFor(x => x.SocialMedia1, new { @class = "form-control" })
+            <br />
+            <label>Social Media 2</label>
+            @Html.TextBoxFor(x => x.SocialMedia2, new { @class = "form-control" })
+            <br />
+            <label>Social Media 3</label>
+            @Html.TextBoxFor(x => x.SocialMedia3, new { @class = "form-control" })
+
+
+
+            <br />
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+    </form>
+
+
+</div>
+
+

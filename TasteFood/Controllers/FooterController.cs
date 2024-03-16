@@ -20,31 +20,29 @@ namespace TasteFood.Controllers
         }
 
         [HttpGet]
-        public ActionResult CreateMessage()
-        {
-
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult CreateMessage(Footer p)
-        {
-            context.Footers.Add(p);
-            context.SaveChanges();
-            return RedirectToAction("FooterList");
-
-
-        }
-
-        public ActionResult DeleteMessage(int id)
+        public ActionResult UpdateFooter(int id)
         {
             var value = context.Footers.Find(id);
-            context.Footers.Remove(value);
+
+
+            return View(value);
+        }
+
+
+        public ActionResult UpdateFooter(Footer p)
+        {
+            var value = context.Footers.Find(p.FooterId);
+            value.Description = p.Description;
+            value.SocialMedia1 = p.SocialMedia1;
+            value.SocialMedia2 = p.SocialMedia2;
+            value.SocialMedia3 = p.SocialMedia3;
             context.SaveChanges();
             return RedirectToAction("FooterList");
 
-
         }
+
+
+
 
     }
 }

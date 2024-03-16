@@ -188,6 +188,10 @@
     <Compile Include="Migrations\202403150024557_mig7.designer.cs">
       <DependentUpon>202403150024557_mig7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403161344347_mig8.cs" />
+    <Compile Include="Migrations\202403161344347_mig8.designer.cs">
+      <DependentUpon>202403161344347_mig8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -245,6 +249,7 @@
     <Content Include="Template\ruang-admin\font\OFL.txt" />
     <Content Include="Template\ruang-admin\form_advanceds.html" />
     <Content Include="Template\ruang-admin\form_basics.html" />
+    <Content Include="Template\ruang-admin\img\AlihanKuru.jpg" />
     <Content Include="Template\ruang-admin\img\boy.png" />
     <Content Include="Template\ruang-admin\img\error.svg" />
     <Content Include="Template\ruang-admin\img\girl.png" />
@@ -2295,9 +2300,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Template\tasteit-master\.DS_Store" />
     <Content Include="Template\tasteit-master\css\.DS_Store" />
     <Content Include="Template\tasteit-master\fonts\.DS_Store" />
@@ -4836,7 +4838,7 @@
     <Content Include="Views\Product\UpdateProduct.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Notification\NotificationList.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\PartialSlider\PartialSliderList.cshtml" />
     <Content Include="Views\PartialSlider\CreatePartialSlider.cshtml" />
@@ -4856,6 +4858,9 @@
     <Content Include="Views\Aboutt\UpdateAboutt.cshtml" />
     <Content Include="Views\Footer\FooterList.cshtml" />
     <Content Include="Views\Default\PartialFooter2.cshtml" />
+    <Content Include="Views\Chef\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Footer\UpdateFooter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4913,6 +4918,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403150024557_mig7.resx">
       <DependentUpon>202403150024557_mig7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403161344347_mig8.resx">
+      <DependentUpon>202403161344347_mig8.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

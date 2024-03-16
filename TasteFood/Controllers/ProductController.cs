@@ -13,7 +13,15 @@ namespace TasteFood.Controllers
     {
         TasteContext context = new TasteContext();
         // GET: Product
-        [Authorize]
+
+        public ActionResult Index()
+        {
+            var values = context.Products.ToList();
+            return View(values);
+        }
+
+
+        //[Authorize]
         public ActionResult ProductList()
         {
             var values = context.Products.ToList();
