@@ -20,20 +20,20 @@ It can read the data from the contact form on the page. Can confirm, cancel and 
 - Jquery
 - Ajax
 - Authentication
-  
+  https://github.com/alihankuru/TasteFood/blob/master/a1.png
 # TasteFood Web UI
-![TasteFood Web UI](https://github.com/alihankuru/PortfolioApp/blob/master/a1.png)
-![TasteFood Web UI](https://github.com/alihankuru/PortfolioApp/blob/master/a2.png)
-![TasteFood Web UI](https://github.com/alihankuru/PortfolioApp/blob/master/a3.png)
-![TasteFood Web UI](https://github.com/alihankuru/PortfolioApp/blob/master/a4.png)
-![TasteFood Web UI](https://github.com/alihankuru/PortfolioApp/blob/master/a5.png)
-![TasteFood Web UI](https://github.com/alihankuru/PortfolioApp/blob/master/a55.png)
+![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a1.png)
+![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a2.png)
+![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a3.png)
+![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a4.png)
+![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a5.png)
+![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a55.png)
 
 # TasteFood Admin UI
-![TasteFood Admin UI](https://github.com/alihankuru/PortfolioApp/blob/master/a5.png)
-![TasteFood Admin UI](https://github.com/alihankuru/PortfolioApp/blob/master/a6.png)
-![TasteFood Admin UI](https://github.com/alihankuru/PortfolioApp/blob/master/a7.png)
-![TasteFood Admin UI](https://github.com/alihankuru/PortfolioApp/blob/master/a9.png)
+![TasteFood Admin UI](https://github.com/alihankuru/TasteFood/blob/master/a5.png)
+![TasteFood Admin UI](https://github.com/alihankuru/TasteFood/blob/master/a6.png)
+![TasteFood Admin UI](https://github.com/alihankuru/TasteFood/blob/master/a7.png)
+![TasteFood Admin UI](https://github.com/alihankuru/TasteFood/blob/master/a9.png)
 
 ## Installation
 
