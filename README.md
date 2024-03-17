@@ -26,7 +26,6 @@ It can read the data from the contact form on the page. Can confirm, cancel and 
 ![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a2.png)
 ![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a3.png)
 ![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a4.png)
-![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a5.png)
 ![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a55.png)
 
 # TasteFood Admin UI
