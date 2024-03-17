@@ -18,7 +18,13 @@ namespace TasteFood.Controllers
             ViewBag.v3 = context.Chefs.Count();
             ViewBag.v4 = context.Reservations.Where(x => x.ReservationStatus == "Aktif").Count();
 
-            return View();
+            ViewBag.mesaj = context.Contacts.Count();
+            ViewBag.rezevasyon = context.Reservations.Count();
+            ViewBag.müşteri = context.Testimonials.Count();
+            ViewBag.productprice = Convert.ToInt32(context.Products.Max(x => x.Price));
+            var value = context.Reservations.Take(5).ToList();
+
+            return View(value);
         }
     }
 }

@@ -21,13 +21,13 @@ namespace TasteFood.Controllers
         }
 
 
-        //[Authorize]
+        [Authorize]
         public ActionResult ProductList()
         {
             var values = context.Products.ToList();
             return View(values);
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult CreateProduct()
         {
@@ -44,7 +44,7 @@ namespace TasteFood.Controllers
 
         }
 
-
+        [Authorize]
         [HttpPost]
         public ActionResult CreateProduct(Product p)
         {
@@ -82,7 +82,7 @@ namespace TasteFood.Controllers
             return RedirectToAction("ProductList");
         }
 
-
+        [Authorize]
         public ActionResult DeleteProduct(int id)
         {
             var value = context.Products.Find(id);
@@ -91,7 +91,7 @@ namespace TasteFood.Controllers
             return RedirectToAction("ProductList");
         }
 
-
+        [Authorize]
         [HttpGet]
         public ActionResult UpdateProduct(int id)
         {
@@ -110,7 +110,7 @@ namespace TasteFood.Controllers
 
         }
 
-
+        [Authorize]
         public ActionResult UpdateProduct(Product p)
         {
             var value = context.Products.Find(p.ProductId);

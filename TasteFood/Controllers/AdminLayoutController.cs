@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -61,6 +62,15 @@ namespace TasteFood.Controllers
             values.IsRead = false;
             context.SaveChanges();
             return RedirectToAction("NotificationList", "Notification");
+        }
+
+        public PartialViewResult PartialProfile()
+        {
+            ViewBag.v = Session["name"];
+            ViewBag.a=Session["img"];
+            var value = context.Admins.Find(Session["id"]);
+            
+            return PartialView(value);
         }
 
     }

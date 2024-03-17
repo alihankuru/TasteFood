@@ -1,0 +1,51 @@
+﻿@model TasteFood.Entites.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hakkımızda Güncelle</h2>
+
+<h2>About2 Güncelle</h2>
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
+            <li class="breadcrumb-item">About 2</li>
+            <li class="breadcrumb-item active" aria-current="page">About 2 İşlemleri</li>
+        </ol>
+    </div>
+
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+
+            @Html.HiddenFor(x => x.AboutId)
+            <label>Title</label>
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+            <br />
+
+            <label>Açıklaması</label>
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+            <br />
+            <label>Ürün Görsel</label>
+            <img style="width: 100px; height: 100px;" src="@Model.ImageUrl" class="img-thumbnail">
+            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+            <br />
+
+
+
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+    </form>
+
+
+</div>
+
+
+
+
