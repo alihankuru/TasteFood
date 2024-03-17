@@ -20,7 +20,7 @@ It can read the data from the contact form on the page. Can confirm, cancel and 
 - Jquery
 - Ajax
 - Authentication
-  https://github.com/alihankuru/TasteFood/blob/master/a1.png
+ 
 # TasteFood Web UI
 ![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a1.png)
 ![TasteFood Web UI](https://github.com/alihankuru/TasteFood/blob/master/a2.png)
